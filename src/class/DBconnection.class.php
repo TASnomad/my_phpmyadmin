@@ -17,9 +17,8 @@ class DBconnection {
 	private function __construct($throwError = true) {
 		self::$instance = new PDO($this->dbString, $this->login, $this->password);
 
-		if ($throwError && self::$instance->instance) {
 		if ($throwError && self::$instance) {
-			self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::EXECPTION_MODE);
+			self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		}
 	}
 }
