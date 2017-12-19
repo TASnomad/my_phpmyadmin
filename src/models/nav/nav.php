@@ -1,15 +1,23 @@
 <nav>
-    <ul>
-      <li><a href="index.php">Home</a></li>
-      <li><a href='#'>blog</a></li>
-      <?php
-      if(isset($_SESSION['identifiant'])){
-        echo " <li><a href='gestion'>Gestion</a></li> \n";
-        echo " <li><a href='deconnexion'>Déconnexion</a></li> \n";
-      }
-      else {
-        echo " <li><a href='connexion'>Connexion</a> </li>";
-      }
+    <div class="nav-wrapper cyan darken-1">
+      <div class="row">
+        <div class="col s12">
+          <a href="index.php" class="brand-logo">DamboBarreauBriand'S PhpMyAdmin</a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <?php if (isset($_SESSION['identifiant']))
+                {
+                  echo '
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">\n
+                      <li><a href="dashboard"><i class="material-icons left">pie_chart</i> Dashboard</a></li>\n
+                      <li><a href="sentiment_analysis"><i class="material-icons left">donut_small</i> Sentiment Analysis</a></li>\n
+                    </ul>\n
+                    <ul class="side-nav" id="mobile-demo">\n
+                      <li><a href="dashboard"><i class="material-icons">pie_chart</i> Dashboard</a></li>\n
+                      <li><a href="sentiment_analysis"><i class="material-icons">donut_small</i> Sentiment Analysis</a></li>\n
+                    </ul>';
+                }
           ?>
-    </ul>
+        </div>
+      </div>
+    </div>
 </nav>

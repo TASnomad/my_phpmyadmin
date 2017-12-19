@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<?php 
-		require_once("header.php"); 
+		<?php
+		require_once("header.php");
 		require_once("../class/formObject.class.php");
 		?>
-	</head>	
-	
+	</head>
+
 	<body>
 		<?php require_once('../models/nav/nav.php'); ?>
 		<h1> TEST </h1>
@@ -14,7 +14,7 @@
 		$field = [];
 		$field['name'] = "test";
 		$field['type'] = "password";
-		$test = new formObject($test, [0 => $field], "lol", "POST");
+		$test = new formObject("form1", [0 => $field], "lol", "POST");
 		echo $test->toString();
 		?>
 	</body>
