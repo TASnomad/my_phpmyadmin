@@ -21,7 +21,7 @@ class formObject
         $this->method = $method;
     }
     
-    protected function toString(){
+    public function toString(){
         $str = "";
         if(isset($this))
         {
