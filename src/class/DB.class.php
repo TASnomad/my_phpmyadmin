@@ -2,7 +2,7 @@
 
 class DB {
 	public static function getDBFields($dbName) {
-		$conn = $DBconnection::getInstance();
+		$conn = DBconnection::getInstance();
 		$stmt = $conn->prepare("DESCRIBE mysql.$dbName");
 		$result = $stmt->execute();
 
