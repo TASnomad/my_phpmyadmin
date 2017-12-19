@@ -15,7 +15,7 @@
 		$field['name'] = "test";
 		$field['type'] = "password";
 		$test = new formObject($test, [0 => $field], "lol", "POST");
-		$test->toString();
+		echo $test->toString();
 		?>
 	</body>
 </html>
