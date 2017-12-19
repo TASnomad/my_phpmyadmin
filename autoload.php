@@ -2,10 +2,8 @@
 
 function __autoload($classname)
 {
-	if (file_exists(realpath(dirname(__FILE__).'/class/'.$classname.'.class.php')))
-		require 'class/'.$classname.'.class.php';
+	if (file_exists(realpath($_SERVER['DOCUMENT_ROOT'].'/src/class/'.$classname.'.class.php')))
+		require 'src/class/'.$classname.'.class.php';
 }
-
-//spl_autoload_register('');
 
 ?>
