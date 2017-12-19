@@ -1,0 +1,312 @@
+body {
+  background-color: #ecf0f1;
+  font-family: 'Quicksand', sans-serif;
+  padding-top: 50px;
+}
+
+footer {
+  background-color: #1abc9c;
+  color: #ecf0f1;
+  width: 100%;
+  margin: 0;
+  position: relative;
+  bottom: 0px;
+  left: 0px;
+  padding-top: 0;
+  text-align: center;
+}
+
+footer p, footer a {
+  font-family: 'Quicksand', sans-serif;
+  color: #ecf0f1;
+}
+
+footer h2 {
+  color: #ecf0f1;
+}
+
+form {
+  margin: auto;
+  text-align: center;
+}
+
+footer a {
+  font-size: 40px;
+}
+
+i {
+  color: #ecf0f1;
+}
+
+i:hover {
+  color: #2c3e50;
+}
+
+nav {
+  background-color: #1abc9c;
+  height: 40px;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  padding-top: 0;
+  text-align: center;
+}
+
+nav ul {
+  margin: auto;
+  padding-right: 10%;
+  list-style: none;
+  font-size: 2em;
+  font-weight: 300;
+  font-family: 'Quicksand', sans-serif;
+  padding-bottom: 15px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav a {
+  display: inline;
+  color: #ecf0f1;
+  text-decoration: none;
+}
+
+nav li:hover {
+  background-color: #16a085;
+}
+
+a, h1, h2, h3, h4, h5, p {
+  color: #2c3e50;
+}
+
+/* affichage des tableaux */
+th a{
+    color : #ecf0f1;
+}
+th a:visited{
+    color : #ecf0f1;
+}
+table {
+  border-collapse:collapse;
+  margin : auto;
+  width : 100%;
+  text-align: center;
+  border-style: solid;
+  border-width : 2px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+table tr{
+  background-color: #ecf0f1;
+  border-style: solid;
+  border-width : 2px;
+}
+table tr:nth-child(odd){
+  background-color: #bdc3c7;
+
+}
+table td{
+  border-style: solid;
+  border-width : 2px;
+}
+table tr input[type=text]{
+    background-color: #ecf0f1;
+    border-style :none;
+}
+
+table tr:nth-child(odd) input[type=text]{
+  background-color: #bdc3c7;
+
+}
+table tr input[type=submit]{
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  border: solid #3498db 2px;
+  background: #3498db;
+  text-decoration: none;
+}
+table .numero{
+  width : 15px;
+}
+th{
+  background-color: #1abc9c;
+  margin : auto;
+  color : #ecf0f1;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-style: solid;
+  border-width : 2px;
+}
+
+select {
+  margin-bottom: 20px;
+}
+.article h3 {
+  padding-right: 20%;
+  padding-left: 20%;
+  text-align: center;
+}
+
+.article i {
+  color: #2c3e50;
+}
+
+.article a:hover {
+  text-decoration: underline;
+}
+
+.article a {
+  text-decoration: none;
+}
+
+.author {
+  font-style: italic;
+}
+
+.button {
+  color: rgb(236, 240, 241);
+  padding: 10px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background-color: rgb(0, 188, 156);
+  border-style: none;
+  margin-bottom: 20px;
+}
+
+.button:hover {
+  background-color: #16a085;
+}
+
+.corps {
+  margin-left: 15%;
+  margin-right: 15%;
+  padding-bottom: 30px;
+}
+
+.connexion {
+  text-align: center;
+}
+
+.footer_content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.gest_nav {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  background-color: #12b090;
+  margin-top: -35px;
+  bottom: 0;
+  -moz-border-radius-bottomright: 15px;
+  -webkit-border-bottom-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  -moz-border-radius-bottomleft: 15px;
+  -webkit-border-bottom-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.gest_nav ul {
+  padding-right: 35px;
+}
+
+.gest_nav ul li {
+  display: inline;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+}
+
+.gest_nav a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.gest_nav a:hover {
+  background-color: #1abc9c;
+}
+
+.gest_nav .number {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.form_article {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #95a5a6;
+  border-radius: 5px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.form_article input {
+  width: 400px;
+}
+
+.form_article textarea {
+  width: 400px;
+  height: 200px;
+}
+
+/** Zone responsive du css **/
+
+@media screen and (max-width: 380px) {
+  body {
+    color: #2c3e50;
+    text-align: center;
+  }
+  nav {
+    height: 40px;
+    font-size: .7em;
+  }
+  p {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 600px) and (min-width: 380px) {
+  body {
+    margin-top: 35px;
+    font-size: 1.5em;
+    color: #2c3e50;
+    text-align: center;
+  }
+  nav {
+    height: 85px;
+    font-size: .7em;
+  }
+}
+
+@media screen and (max-width: 850px) and (min-width: 600px) {
+  body {
+    font-size: 1.2em;
+    color: #2c3e50;
+    margin-top: 45px;
+  }
+  nav {
+    height: 96px;
+  }
+  .corps {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .gest_nav {
+    margin-top: -20px;
+  }
+
+  .form_article{
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}
