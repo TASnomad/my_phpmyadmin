@@ -98,11 +98,15 @@ class formObject
 
     public function getErrorInput()
     {
+<<<<<<< HEAD
       return "<div class='row'><div class='col s4'></div>\n<div class='card-panel col s4 red darken-3'><span class='grey-text text-lighten-5'>Erreur dans la création du formulaire !!</span></div>\n<div class='col s4'></div>\n</div>\n";
     }
 
     public function getErrorField($txt){
       return "<div class='row'><div class='col s4'></div>\n<div class='card-panel col s4 red darken-3'><span class='grey-text text-lighten-5'>$txt</span></div>\n<div class='col s4'></div>\n</div>\n";
+=======
+      return "<div class='card-panel><span class='red-text text-darken-3'>Erreur dans la création du formulaire !!</span></div>";
+>>>>>>> 2c44f3f631bae958ac3bf67b16bc19e0c125c8c6
     }
 
     public function getExtras(){

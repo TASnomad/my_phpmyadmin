@@ -4,12 +4,13 @@
 
 	require '../../Autoloader.php';
 	Autoloader::register();
-	$res = DB::checkUser($_POST["login"], $_POST["password"]);
+	$user = new User($_POST["login"], $_POST["password");
+	/*$res = DB::checkUser($_POST["login"], $_POST["password"]);*/
 
 	$protocol  = empty($_SERVER['HTTPS']) ? 'http' : 'https';
 	$fullUrl  = "${protocol}://". $_SERVER['HTTP_HOST']."/src/view";
 
-	if ($res) {
+	if ($user->check()) {
 		session_start();
 		$_SESSION["user"] = $_POST["login"];
 		header("Location: $fullUrl/index.php");
