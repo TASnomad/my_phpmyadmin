@@ -93,7 +93,7 @@ class formObject
 
     public function getErrorInput()
     {
-      return "<div class='card-panel><span class='red-text text-darken-3'>Erreur dans la création du formulaire !!</span></div>";
+      return "<div class='card-panel><span class='red-text text-darken-3'>Erreur dans la crÃ©ation du formulaire !!</span></div>";
     }
 
     public function getExtras(){

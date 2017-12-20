@@ -7,13 +7,12 @@
 		require_once("header.php");
 		require_once("../../Autoloader.php");
 		require_once("../models/forms/formSQLConsole.php");
+		Autoloader::register();
 		$test = DB::getDBFields("user");
 		require_once("../class/formObject.class.php");
 			error_reporting(E_ALL | E_STRICT);
 			ini_set("display_errors", 1);
-			require_once("header.php");
-			require_once("../../Autoloader.php");
-			Autoloader::register();
+
 		?>
 	</head>
 
