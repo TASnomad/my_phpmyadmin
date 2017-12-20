@@ -2,27 +2,12 @@
 <html>
 	<head>
 		<?php
-<<<<<<< HEAD
-		error_reporting(E_ALL | E_STRICT);
-		ini_set("display_errors", 1);
-		require_once("header.php");
-		require_once("../../Autoloader.php");
-		require_once("../models/forms/formSQLConsole.php");
-		Autoloader::register();
-		$test = DB::getDBFields("user");
-		require_once("../class/formObject.class.php");
-			error_reporting(E_ALL | E_STRICT);
-			ini_set("display_errors", 1);
-
-=======
 			error_reporting(E_ALL | E_STRICT);
 			ini_set("display_errors", 1);
 			require_once("header.php");
 			require_once("../../Autoloader.php");
-			Autoloader::register();
 			require_once("../models/forms/formSQLConsole.php");
-			$test = DB::getDBFields("user");
->>>>>>> 3b0713bda08c88a6cf5ebe09b7ba0614ecd6e586
+			Autoloader::register();
 		?>
 	</head>
 

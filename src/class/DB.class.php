@@ -25,6 +25,7 @@ class DB {
 		}
 		return (false);
 	}
+
 }
 
 ?>
