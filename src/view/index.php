@@ -4,8 +4,8 @@
 		<?php
 		require_once("header.php");
 		require_once("../../autoload.php");
+		require_once("../models/forms/formSQLConsole.php");
 		$test = DBconnection::getInstance();
-		var_dump($test);
 		require_once("../class/formObject.class.php");
 		?>
 	</head>
@@ -15,10 +15,16 @@
 		<h1> TEST </h1>
 		<?php
 		$field = [];
-		$field['name'] = "test";
-		$field['type'] = "password";
-		$test = new formObject("form1", [0 => $field], "lol", "POST");
+		$field['name'] = "login";
+		$field['type'] = "text";
+		
+		$f2 = [];
+		$f2['name'] = "password";
+		$f2['type'] = "password";
+		$test = new formObject("connexion", [0 => $field, 1 => $f2], "lol", "POST");
 		echo $test->toString();
+		
+		createSQLConsole();
 		?>
 	</body>
 </html>
