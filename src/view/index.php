@@ -28,7 +28,7 @@
 		$f2 = [];
 		$f2['name'] = "password";
 		$f2['type'] = "password";
-		$test = new formObject("connexion", [0 => $field, 1 => $f2], "/src/controllers/login.php", "POST");
+		$test = new formObject("connexion", [0 => $field, 1 => $f2], "../controllers/login.php", "POST");
 		echo $test->toString();
 
 		$err = "";

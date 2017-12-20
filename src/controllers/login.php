@@ -4,7 +4,7 @@
 
 	require '../../Autoloader.php';
 	Autoloader::register();
-	$user = new User($_POST["login"], $_POST["password");
+	$user = new User($_POST["login"], $_POST["password"]);
 	/*$res = DB::checkUser($_POST["login"], $_POST["password"]);*/
 
 	$protocol  = empty($_SERVER['HTTPS']) ? 'http' : 'https';
