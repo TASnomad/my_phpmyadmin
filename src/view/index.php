@@ -17,13 +17,13 @@
 		$field = [];
 		$field['name'] = "login";
 		$field['type'] = "text";
-		
+
 		$f2 = [];
 		$f2['name'] = "password";
 		$f2['type'] = "password";
 		$test = new formObject("connexion", [0 => $field, 1 => $f2], "lol", "POST");
 		echo $test->toString();
-		
+
 		createSQLConsole();
 		?>
 	</body>
