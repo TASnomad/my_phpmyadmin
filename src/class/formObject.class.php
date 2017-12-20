@@ -54,6 +54,7 @@ class formObject
       $res = "";
       $name = "";
       $type = "";
+      $err = "";
       if (isset($field['name'])){
         $name = $field['name'];
       }
@@ -69,12 +70,16 @@ class formObject
       }
       else
         $res = $this->getErrorInput();
+      if (isset($field['error'])){
+        $err = $this->getErrorField($field['error']);
+      }
       if ($res == ""){
-        $res = "<div class='row'> \n
+        $res = $err;
+        $res .= "<div class='row'> \n
                   <div class='col s4'></div>\n
                   <div class='input-field col s4'> \n";
         if (preg_match("/^password$|^text$|^email$/", $field['type'])){
-            $res .= "   <input name='$name' id='$name' type = '$type'" . $this->getExtras() . " class='validate'>\n";
+            $res .= "   <input name='$name' id='$name' type = '$type'" . $this->getExtras() . " class='validate'></input>\n";
         }
         else if(preg_match("/^textarea/", $field['type'])){
             if (isset($field['placeholder']))
@@ -93,7 +98,11 @@ class formObject
 
     public function getErrorInput()
     {
-      return "<div class='card-panel><span class='red-text text-darken-3'>Erreur dans la création du formulaire !!</span></div>"
+      return "<div class='row'><div class='col s4'></div>\n<div class='card-panel col s4 red darken-3'><span class='grey-text text-lighten-5'>Erreur dans la création du formulaire !!</span></div>\n<div class='col s4'></div>\n</div>\n";
+    }
+
+    public function getErrorField($txt){
+      return "<div class='row'><div class='col s4'></div>\n<div class='card-panel col s4 red darken-3'><span class='grey-text text-lighten-5'>$txt</span></div>\n<div class='col s4'></div>\n</div>\n";
     }
 
     public function getExtras(){

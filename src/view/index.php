@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<?php
-<<<<<<< HEAD
+
 		error_reporting(E_ALL | E_STRICT);
 		ini_set("display_errors", 1);
 		require_once("header.php");
@@ -11,18 +11,6 @@
 		Autoloader::register();
 		$test = DB::getDBFields("user");
 		require_once("../class/formObject.class.php");
-			error_reporting(E_ALL | E_STRICT);
-			ini_set("display_errors", 1);
-
-=======
-			error_reporting(E_ALL | E_STRICT);
-			ini_set("display_errors", 1);
-			require_once("header.php");
-			require_once("../../Autoloader.php");
-			Autoloader::register();
-			require_once("../models/forms/formSQLConsole.php");
-			$test = DB::getDBFields("user");
->>>>>>> 3b0713bda08c88a6cf5ebe09b7ba0614ecd6e586
 		?>
 	</head>
 
@@ -43,7 +31,11 @@
 		$test = new formObject("connexion", [0 => $field, 1 => $f2], "/src/controllers/login.php", "POST");
 		echo $test->toString();
 
-		createSQLConsole();
+		$err = "";
+		if (isset($_GET['err'])){
+			$err = $_GET['err'];
+		}
+		createSQLConsole($err);
 		?>
 	</body>
 </html>

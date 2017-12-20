@@ -4,7 +4,8 @@
         <div class="col s12">
           <a href="index.php" class="brand-logo">DamboBarreauBriand'S PhpMyAdmin</a>
           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-          <?php if (isset($_SESSION['identifiant']))
+          <?php
+          if (isset($_SESSION['identifiant']))
                 {
                   echo '
                     <ul id="nav-mobile" class="right hide-on-med-and-down">\n
