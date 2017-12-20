@@ -3,7 +3,7 @@
 	<head>
 		<?php
 		require_once("header.php");
-		require_once("../../autoload.php");
+		require_once("../../Autoloader.php");
 		require_once("../models/forms/formSQLConsole.php");
 		$test = DBconnection::getInstance();
 		require_once("../class/formObject.class.php");
