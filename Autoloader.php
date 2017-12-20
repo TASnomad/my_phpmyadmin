@@ -1,6 +1,6 @@
 <?php
 
-class Autoloader
+/*class Autoloader
 {
 	public static function autoload($classname)
 	{
@@ -12,14 +12,14 @@ class Autoloader
 	{
 		spl_autoload_register(array(__CLASS__ ,'autoload'));
 	}
-}
+}*/
 
 
-/*function __autoload($classname)
+function __autoload($classname)
 {
 	if (file_exists(realpath(dirname(__FILE__).'/src/class/'.$classname.'.class.php')))
 		require 'src/class/'.$classname.'.class.php';
 }
-//spl_autoload_register('');*/
+//spl_autoload_register();
 
 ?>
