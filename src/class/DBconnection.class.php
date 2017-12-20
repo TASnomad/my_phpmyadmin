@@ -6,6 +6,7 @@ class DBconnection {
 	private $password = "root";
 
 	private static $instance = null;
+	public $pdo;
 
 	public static function getInstance() {
 		if (self::$instance == null) {
@@ -15,10 +16,10 @@ class DBconnection {
 	}
 
 	private function __construct($throwError = true) {
-		self::$instance = new PDO($this->dbString, $this->login, $this->password);
+		$this->pdo = new PDO($this->dbString, $this->login, $this->password);
 
 		if ($throwError && self::$instance) {
-			self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			$this->instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		}
 	}
 }
