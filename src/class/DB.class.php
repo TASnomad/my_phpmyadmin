@@ -15,12 +15,13 @@ class DB {
 
 	public static function checkUser($login, $password) {
 		$conn = DBconnection::getInstance();
-		$conn->exec("USE mysql");
-		$stmt = $conn->pdo->prepare("SELECT User, Password FROM user WHERE User = ? AND Password = ?");
-		$res = $stmt->execute([$login, sha1(sha1($password))]);
+		$conn->pdo->exec("USE mysql");
+		$stmt = $conn->pdo->prepare("SELECT User, Password FROM user WHERE User = ? AND Password = PASSWORD(?)");
+		$res = $stmt->execute([$login, $password]);
 		if ($res) {
-			if ($stmt->rowCount() >= 0)
+			if ($stmt->rowCount() > 0) {
 				return (true);
+			}
 		}
 		return (false);
 	}

@@ -29,7 +29,7 @@ class formObject
                       <div class='col s1'></div>\n
                       <div class='col s10'>\n
                         <h4 class='center'> Formulaire : $this->name </h4>\n";
-           $str .= "    <form action='$this->co_link' method='$this->method>\n";
+           $str .= "    <form action='$this->co_link' method='$this->method'>\n";
            foreach ($this->field as $field){
                $str .= $this->getFieldAndLabel($field);
            }
@@ -93,7 +93,7 @@ class formObject
 
     public function getErrorInput()
     {
-      return "<div class='card-panel><span class='red-text text-darken-3'>Erreur dans la création du formulaire !!</span></div>";
+      return "<div class='card-panel><span class='red-text text-darken-3'>Erreur dans la création du formulaire !!</span></div>"
     }
 
     public function getExtras(){
