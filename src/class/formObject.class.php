@@ -33,9 +33,17 @@ class formObject
            foreach ($this->field as $field){
                $str .= $this->getFieldAndLabel($field);
            }
-           $str .= "    </div>\n
+           $str  .= "    <div class='row'> \n
+                            <div class='col s4'></div>\n
+                                <button class='col s4 btn waves-effect waves-light cyan darken-1' type='submit' name='action'>Submit\n
+                                    <i class='material-icons right'>send</i>\n
+                                </button>\n
+                            <div class='col s4'></div>\n
+                        </div>\n";
+           $str .= "    </form>\n
+                        </div>\n
                         <div class='col s1'></div>\n
-                      </form>\n";
+                      </div>";
         }
         else
             $str = "Error while doing toString";
@@ -63,12 +71,21 @@ class formObject
         $res = $this->getErrorInput();
       if ($res == ""){
         $res = "<div class='row'> \n
-                  <div class='col s3'></div>\n
-                  <div class='input-field col s6'> \n";
-        $res .= "   <input name='$name' id='$name' type = '$type'" . $this->getExtras() . " class='validate'>\n";
+                  <div class='col s4'></div>\n
+                  <div class='input-field col s4'> \n";
+        if (preg_match("/^password$|^text$|^email$/", $field['type'])){
+            $res .= "   <input name='$name' id='$name' type = '$type'" . $this->getExtras() . " class='validate'>\n";
+        }
+        else if(preg_match("/^textarea/", $field['type'])){
+            if (isset($field['placeholder']))
+                $plh = $field['placeholder'];
+            else
+                $plh = "";
+            $res .=  "<textarea name='$name' class='materialize-textarea' placeholder='$plh'></textarea>";
+        }
         $res .= "   <label for='$name'>$name :</label>\n";
-        $res .= " <div class='col s3'></div>\n
-                  </div>\n
+        $res .= " </div>\n
+                  <div class='col s4'></div>\n
                   </div>\n";
       }
       return $res;
@@ -76,7 +93,7 @@ class formObject
 
     public function getErrorInput()
     {
-      return "<p class='red darken-3'>Erreur dans la crÃ©ation du formulaire !!</p>";
+      return "<div class='card-panel><span class='red-text text-darken-3'>Erreur dans la création du formulaire !!</span></div>";
     }
 
     public function getExtras(){
