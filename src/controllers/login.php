@@ -5,8 +5,6 @@
 	require '../../Autoloader.php';
 	Autoloader::register();
 	$user = new User($_POST["login"], $_POST["password"]);
-	/*$res = DB::checkUser($_POST["login"], $_POST["password"]);*/
-
 	$protocol  = empty($_SERVER['HTTPS']) ? 'http' : 'https';
 	$fullUrl  = "${protocol}://". $_SERVER['HTTP_HOST']."/src/view";
 
@@ -15,6 +13,6 @@
 		$_SESSION["user"] = $_POST["login"];
 		header("Location: $fullUrl/index.php");
 	} else {
-		header("Location: $fullUrl/index.php?err=Le mot de passe ou le login est erroné");
+		header("Location: $fullUrl/index.php?err=Le mot de passe ou le login est incorrect");
 	}
 ?>
