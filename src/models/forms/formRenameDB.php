@@ -1,7 +1,7 @@
 <?php
 require_once("../../Autoloader.php");
 
-function createDB($error = ""){
+function reanameDB($error = ""){
   $filed = [];
   $field['name'] = "Nom de la base";
   $field['type'] = "text";
