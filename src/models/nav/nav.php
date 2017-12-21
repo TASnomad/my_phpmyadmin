@@ -1,3 +1,10 @@
+<?php 
+    //demarrage de la session
+    if (!isset($_SESSION['user'])){
+        session_start();
+    }
+?>
+
 <nav>
     <div class="nav-wrapper cyan darken-1">
       <div class="row">
