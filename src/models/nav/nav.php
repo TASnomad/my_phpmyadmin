@@ -1,4 +1,4 @@
-<?php 
+<?php
     //demarrage de la session
     if (!isset($_SESSION['user'])){
         session_start();
@@ -17,11 +17,11 @@
                   echo "
                     <ul id='nav-mobile' class='right hide-on-med-and-down'>\n
                       <li><a href='console_SQL.php'><i class='material-icons left'>computer</i> SQL_Console</a></li>\n
-                      <li><a href='datas.sql'><i class='material-icons left'>list</i> Datas</a></li>\n
+                      <li><a href='db.php'><i class='material-icons left'>list</i> Datas</a></li>\n
                     </ul>\n
                     <ul class='side-nav' id='mobile-demo'>\n
                       <li><a href='console_SQL.php'><i class='material-icons left'>computer</i> SQL_Console</a></li>\n
-                      <li><a href='datas.php'><i class='material-icons left'>list</i> Datas</a></li>\n
+                      <li><a href='db.php'><i class='material-icons left'>list</i> Datas</a></li>\n
                     </ul>";
                 }
           ?>
