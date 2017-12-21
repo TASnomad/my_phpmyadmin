@@ -12,7 +12,7 @@ function createSQLConsole($error = ""){
 }
 
 function formSuccess($msg = ""){
-    if ($msg= ""){
+    if ($msg == ""){
         return;
     }
     else {
@@ -35,7 +35,7 @@ function formSuccess($msg = ""){
 }
 
 function formError($msg = ""){
-    if ($msg= ""){
+    if ($msg == ""){
         return;
     }
     else {
