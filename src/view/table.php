@@ -29,25 +29,37 @@
 							<label for="name">Nom de la DB</label>
 						</div>
 					</div>
+          <div class="row">
+						<div class="input-field col s6">
+              <input type="text" name="name" id="name" required>
+              <label for="name">Nom de la tale</label>
+						</div>
+					</div>
 					<div class="row">
 						<div class="input-field col s6">
 							<input type="text" name="one" id="one" required>
 							<label for="one">Premier champ</label>
 						</div>
-						<div class="input-field col s6">
-							<input type="text" name="tone" id="tone" required>
-							<label for="tone">Type</label>
-						</div>
+            <select class="browser-default col s6">
+              <option value="" disabled selected>Type</option>
+              <option value="1">INT</option>
+              <option value="2">VARCHAR</option>
+              <option value="3">TEXT</option>
+              <option value="3">DATE</option>
+            </select>
 					</div>
 					<div class="row">
 						<div class="input-field col s6">
 							<input type="text" name="two" id="two" required>
 							<label for="two">Second champ</label>
 						</div>
-						<div class="input-field col s6">
-							<input type="text" name="ttwo" id="ttwo" required>
-							<label for="ttwo">Type</label>
-						</div>
+            <select class="browser-default col s6">
+              <option value="" disabled selected>Type</option>
+              <option value="1">INT</option>
+              <option value="2">VARCHAR</option>
+              <option value="3">TEXT</option>
+              <option value="3">DATE</option>
+            </select>
 					</div>
 
 					<div class="row">
@@ -55,10 +67,13 @@
 							<input type="text" name="three" id="three" required>
 							<label for="three">Troisième champ</label>
 						</div>
-						<div class="input-field col s6">
-							<input type="text" name="tthree" id="tthree" required>
-							<label for="tthree">Type</label>
-						</div>
+            <select class="browser-default col s6">
+              <option value="" disabled selected>Type</option>
+              <option value="1">INT</option>
+              <option value="2">VARCHAR</option>
+              <option value="3">TEXT</option>
+              <option value="3">DATE</option>
+            </select>
 					</div>
 					<div class="row">
 						<button class='col m4 s8 btn waves-effect waves-light cyan darken-1' type='submit' name='action'>
