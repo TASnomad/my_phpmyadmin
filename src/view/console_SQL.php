@@ -22,6 +22,14 @@
 		if (isset($_GET['err'])){
 		    $err = $_GET['err'];
 		}
+		
+		if (isset($_GET['msg'])){
+		    formSuccess($_GET['msg']);
+		}
+		
+		if (isset($_GET['error'])){
+		    formError($_GET['error']);
+		}
 		createSQLConsole($err);
 		
 		?>

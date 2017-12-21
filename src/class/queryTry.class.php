@@ -23,11 +23,12 @@ class queryTry {
               $this->res = "Aucun résultat pour $this->query";
           }
           else {
-              header("Location: ../view/console_SQL.php?msg=il y $this->exec()");
+              header("Location: ../view/console_SQL.php?msg=il y a $this->exec() lignes qui ont ete traitees");
           }
+          header("Location: ../view/console_SQL.php?msg=requete effectuee avec succes");
       }
       catch(Exception $e) {
-          header("Location: ../view/console_SQL.php?msg=$e");
+          header("Location: ../view/console_SQL.php?error=$e");
       }
   }
 }
