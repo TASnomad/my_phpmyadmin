@@ -1,7 +1,8 @@
 <?php
-if (isset($_POST['console_SQL'])){
+if (isset($_POST['console_SQL']) && $_POST['console_SQL'] != ''){
   if (!preg_match("/\"/", $_POST['console_SQL'])){
     $sql = $_POST['console_SQL'];
+    echo "$sql";
   }
   else {
     header("Location: ../view/index.php?err=format invalide");

@@ -15,6 +15,6 @@
 		$_SESSION["user"] = $_POST["login"];
 		header("Location: $fullUrl/index.php");
 	} else {
-		header("Location: $fullUrl/index.php?error=login");
+		header("Location: $fullUrl/index.php?err=Le mot de passe ou le login est erroné");
 	}
 ?>

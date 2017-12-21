@@ -9,33 +9,21 @@
 		require_once("../../Autoloader.php");
 		require_once("../models/forms/formSQLConsole.php");
 		Autoloader::register();
-		$test = DB::getDBFields("user");
 		require_once("../class/formObject.class.php");
 		?>
 	</head>
 
 	<body>
 		<?php require_once('../models/nav/nav.php'); ?>
-		<?php if(isset($_GET["error"])) : ?>
-			<h1>Erreur de login</h1>
-		<?php endif; ?>
-		<h1> TEST </h1>
-		<?php
-		$field = [];
-		$field['name'] = "login";
-		$field['type'] = "text";
+		<h1 class="center "> ConsoleSQL </h1>
+
+		<?php 
 		$err = "";
 		if (isset($_GET['err'])){
 		    $err = $_GET['err'];
 		}
-		$field['error'] = $err;
-
-		$f2 = [];
-		$f2['name'] = "password";
-		$f2['type'] = "password";
-		$test = new formObject("connexion", [0 => $field, 1 => $f2], "../controllers/login.php", "POST");
+		createSQLConsole($err);
 		
-		echo $test->toString();
 		?>
 	</body>
 </html>

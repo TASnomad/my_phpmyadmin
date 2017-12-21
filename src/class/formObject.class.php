@@ -70,7 +70,7 @@ class formObject
       }
       else
         $res = $this->getErrorInput();
-      if (isset($field['error'])){
+      if (isset($field['error']) && $field['error'] != ""){
         $err = $this->getErrorField($field['error']);
       }
       if ($res == ""){
@@ -102,7 +102,7 @@ class formObject
     }
 
     public function getErrorField($txt){
-      return "<div class='row'><div class='col s4'></div>\n<div class='card-panel col s4 red darken-3'><span class='grey-text text-lighten-5'>$txt</span></div>\n<div class='col s4'></div>\n</div>\n";
+      return "<div class='row'>\n<div class='col s4'></div>\n<div class='card-panel col s4 red darken-3'><span class='grey-text text-lighten-5'>$txt</span></div>\n<div class='col s4'></div>\n</div>\n";
     }
 
     public function getExtras(){
