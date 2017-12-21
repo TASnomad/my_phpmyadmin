@@ -18,13 +18,18 @@
 				header("Location: db.php");
 			$db = new Database($_GET["db"]);
 			$tables = $db->getTablesNames();
-			var_dump($tables);
+			$stat = $db->statDB();
 		?>
 		<meta charset="utf-8">
 		<title>BDD: <?php echo $_GET["db"] ?></title>
 	</head>
 	<body>
 		<?php require_once('../models/nav/nav.php'); ?>
+		<div class="row">
+			<h3>Infos sur la base de données</h3>
+			<p>Date de création: <?php echo $stat["Create_time"]; ?></p>
+			<p>Moteur de stockage: <?php echo $stat["Engine"]; ?></p>
+		</div>
 		<div class="row">
 			<form class="col s12 offset-s3" action="../controllers/db.php" method="POST">
 				<div class="row">

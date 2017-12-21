@@ -57,7 +57,8 @@ class Database {
 			return (array());
 		}
 		$data = $data->fetchAll(PDO::FETCH_ASSOC);
-		return ($data);
+		// We can return the first array dimension, because all needed data are here
+		return ($data[0]);
 	}
 
 	public function deleteDB() {
