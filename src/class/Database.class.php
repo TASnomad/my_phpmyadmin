@@ -58,6 +58,8 @@ class Database {
 		}
 		$data = $data->fetchAll(PDO::FETCH_ASSOC);
 		// We can return the first array dimension, because all needed data are here
+		if (empty($data))
+			return (array());
 		return ($data[0]);
 	}
 

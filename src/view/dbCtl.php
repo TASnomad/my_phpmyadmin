@@ -25,8 +25,13 @@
 		<?php require_once('../models/nav/nav.php'); ?>
 		<div class="row">
 			<h3>Infos sur la base de données</h3>
-			<p>Date de création: <?php echo $stat["Create_time"]; ?></p>
-			<p>Moteur de stockage: <?php echo $stat["Engine"]; ?></p>
+			<?php if (empty($stat)) : ?>
+				<p>Aucune données disponibles</p>
+			<?php else : ?>
+				<p>Date de création: <?php echo $stat["Create_time"]; ?></p>
+				<p>Moteur de stockage: <?php echo ($stat["Engine"] != "") ? $stat["Engine"] : "Aucun moteur utilisé" ; ?></p>
+				<p>Espace mémoire utilisé: <?php echo ($stat["Data_length"] != "") ? $stat["Data_length"] : "0" ; ?> bytes</p>
+			<?php endif; ?>
 		</div>
 		<div class="row">
 			<form class="col s12 offset-s3" action="../controllers/db.php" method="POST">
