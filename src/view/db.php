@@ -4,7 +4,7 @@
 		<?php
 			if (session_status() != PHP_SESSION_DISABLED)
 				session_start();
-			if (!isset($_SESSION["login"]))
+			if (!isset($_SESSION["user"]))
 				header("Location: index.php");
 			error_reporting(E_ALL | E_STRICT);
 			ini_set("display_errors", 1);
