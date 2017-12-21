@@ -65,6 +65,16 @@ class Database {
 		$conn->pdo->exec("DROP DATABASE $this->name");
 	}
 
+	public function getTablesNames() {
+		$conn = DBconnection::getInstance();
+		$stmt = $conn->pdo->prepare("SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_SCHEMA=?");
+		if ($stmt->execute(array($this->name))) {
+			$tables = $stmt->fetchAll(PDO::FETCH_COLUMN);
+			return ($tables);
+		}
+		return (array());
+	}
+
 	public static function getAllDBs($excludeSysDB = true) {
 		$conn = DBconnection::getInstance();
 		$dbs = $conn->pdo->query("SHOW DATABASES");

@@ -12,7 +12,7 @@
 			require_once("../../Autoloader.php");
 			require_once("../models/forms/formSQLConsole.php");
 			Autoloader::register();
-			$dbs = Database::getAllDBs();
+			$dbs = Database::getAllDBs(false);
 		?>
 		<meta charset="utf-8">
 		<title>Database Viewver</title>
@@ -50,7 +50,7 @@
 						</div>
 					</div>
 					<div class="row">
-						<button class='col m4 s8 btn waves-effect waves-light cyan darken-1' type='submit' name='action'>
+						<button class='col m4 s8 btn waves-effect waves-light cyan darken-1' type='submit' name='create'>
 							Créer
 							<i class='material-icons right'>send</i>
 						</button>
