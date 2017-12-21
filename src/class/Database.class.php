@@ -64,6 +64,21 @@ class Database {
 		$conn = DBconnection::getInstance();
 		$conn->pdo->exec("DROP DATABASE $this->name");
 	}
+
+	public static function getAllDBs($excludeSysDB = true) {
+		$conn = DBconnection::getInstance();
+		$dbs = $conn->pdo->query("SHOW DATABASES");
+		$dbs = $dbs->fetchAll(PDO::FETCH_COLUMN);
+		$res = array();
+		if ($excludeSysDB) {
+			foreach($dbs as $one) {
+				if ($one != "information_schema" && $one != "mysql" && $one != "performance_schema")
+				array_push($res, $one);
+			}
+			return ($res);
+		}
+		return ($dbs);
+	}
 }
 
 ?>
