@@ -49,6 +49,17 @@ class Database {
 		$this->name = $newName;
 	}
 
+	public function statDB() {
+		$conn = DBconnection::getInstance();
+
+		$data = $conn->pdo->query("SHOW TABLE STATUS FROM $this->name LIKE '%'");
+		if (!$data) {
+			return (array());
+		}
+		$data = $data->fetchAll(PDO::FETCH_ASSOC);
+		return ($data);
+	}
+
 	public function deleteDB() {
 		$conn = DBconnection::getInstance();
 		$conn->pdo->exec("DROP DATABASE $this->name");
