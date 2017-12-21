@@ -14,15 +14,15 @@
           <?php
           if (isset($_SESSION['user']))
                 {
-                  echo '
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">\n
-                      <li><a href="dashboard"><i class="material-icons left">pie_chart</i> Dashboard</a></li>\n
-                      <li><a href="sentiment_analysis"><i class="material-icons left">donut_small</i> Sentiment Analysis</a></li>\n
+                  echo "
+                    <ul id='nav-mobile' class='right hide-on-med-and-down'>\n
+                      <li><a href='console_SQL.php'><i class='material-icons left'>computer</i> SQL_Console</a></li>\n
+                      <li><a href='datas.sql'><i class='material-icons left'>list</i> Datas</a></li>\n
                     </ul>\n
-                    <ul class="side-nav" id="mobile-demo">\n
-                      <li><a href="dashboard"><i class="material-icons">pie_chart</i> Dashboard</a></li>\n
-                      <li><a href="sentiment_analysis"><i class="material-icons">donut_small</i> Sentiment Analysis</a></li>\n
-                    </ul>';
+                    <ul class='side-nav' id='mobile-demo'>\n
+                      <li><a href='console_SQL.php'><i class='material-icons left'>computer</i> SQL_Console</a></li>\n
+                      <li><a href='datas.php'><i class='material-icons left'>list</i> Datas</a></li>\n
+                    </ul>";
                 }
           ?>
         </div>
