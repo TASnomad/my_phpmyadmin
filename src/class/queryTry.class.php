@@ -1,10 +1,12 @@
 <?php
 
 require_once("../../Autoloader.php");
+Autoloader::register();
+
 class queryTry {
   private $query = "";
-  private $co = "";
-  private $exec = "";
+  private $co;
+  private $exec;
   private $res = "";
 
   public function __construct($query = ""){
@@ -15,7 +17,7 @@ class queryTry {
   
   public function execute(){
       try {
-          $this->$exec = $this->co->execute($query);
+          $this->exec = $this->co->pdo->execute($this->query);
           if (preg_match("/^SELECT/", $this->query) && $this->exec->rowCount()){
               $this->res = $this->exec->fetchAll();
           }
