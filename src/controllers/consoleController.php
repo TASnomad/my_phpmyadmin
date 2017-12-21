@@ -5,11 +5,11 @@ if (isset($_POST['console_SQL']) && $_POST['console_SQL'] != ''){
     echo "$sql";
   }
   else {
-    header("Location: ../view/index.php?err=format invalide");
+    header("Location: ../view/console_SQL.php?err=format invalide");
   }
 }
 else{
-  header("Location: ../view/index.php?err=veuillez remplir le tous les champs");
+  header("Location: ../view/console_SQL.php?err=veuillez remplir le tous les champs");
 }
 
 ?>

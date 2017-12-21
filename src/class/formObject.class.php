@@ -34,11 +34,11 @@ class formObject
                $str .= $this->getFieldAndLabel($field);
            }
            $str  .= "    <div class='row'> \n
-                            <div class='col s4'></div>\n
-                                <button class='col s4 btn waves-effect waves-light cyan darken-1' type='submit' name='action'>Submit\n
+                            <div class='col m4 s2'></div>\n
+                                <button class='col m4 s8 btn waves-effect waves-light cyan darken-1' type='submit' name='action'>Submit\n
                                     <i class='material-icons right'>send</i>\n
                                 </button>\n
-                            <div class='col s4'></div>\n
+                            <div class='col m4 s2'></div>\n
                         </div>\n";
            $str .= "    </form>\n
                         </div>\n
@@ -76,8 +76,8 @@ class formObject
       if ($res == ""){
         $res = $err;
         $res .= "<div class='row'> \n
-                  <div class='col s4'></div>\n
-                  <div class='input-field col s4'> \n";
+                  <div class='col m4 s1'></div>\n
+                  <div class='input-field col m4 s10'> \n";
         if (preg_match("/^password$|^text$|^email$/", $field['type'])){
             $res .= "   <input name='$name' id='$name' type = '$type'" . $this->getExtras() . " class='validate'></input>\n";
         }
@@ -90,7 +90,7 @@ class formObject
         }
         $res .= "   <label for='$name'>$name :</label>\n";
         $res .= " </div>\n
-                  <div class='col s4'></div>\n
+                  <div class='col m4 s1'></div>\n
                   </div>\n";
       }
       return $res;
@@ -98,11 +98,11 @@ class formObject
 
     public function getErrorInput()
     {
-      return "<div class='row'><div class='col s4'></div>\n<div class='card-panel col s4 red darken-3'><span class='grey-text text-lighten-5'>Erreur dans la création du formulaire !!</span></div>\n<div class='col s4'></div>\n</div>\n";
+      return "<div class='row'><div class='col m4 s1'></div>\n<div class='card-panel col m4 s10 red darken-3'><span class='grey-text text-lighten-5'>Erreur dans la création du formulaire !!</span></div>\n<div class='col m4 s1'></div>\n</div>\n";
     }
 
     public function getErrorField($txt){
-      return "<div class='row'>\n<div class='col s4'></div>\n<div class='card-panel col s4 red darken-3'><span class='grey-text text-lighten-5'>$txt</span></div>\n<div class='col s4'></div>\n</div>\n";
+      return "<div class='row'>\n<div class='col m4 s1'></div>\n<div class='card-panel col m4 s10 red darken-3'><span class='grey-text text-lighten-5'>$txt</span></div>\n<div class='col m4 s1'></div>\n</div>\n";
     }
 
     public function getExtras(){

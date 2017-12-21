@@ -19,7 +19,7 @@
 		<?php if(isset($_GET["error"])) : ?>
 			<h1>Erreur de login</h1>
 		<?php endif; ?>
-		<h1> TEST </h1>
+		<h1 class="center"> Welcome to our website ! </h1>
 		<?php
 		$field = [];
 		$field['name'] = "login";
@@ -36,6 +36,8 @@
 		$test = new formObject("connexion", [0 => $field, 1 => $f2], "../controllers/login.php", "POST");
 		
 		echo $test->toString();
+		
+		
 		?>
 	</body>
 </html>

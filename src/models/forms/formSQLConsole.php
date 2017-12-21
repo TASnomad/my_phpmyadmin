@@ -10,4 +10,28 @@ function createSQLConsole($error = ""){
     $form = new formObject('Console SQL', [0 => $textarea], '../controllers/consoleController.php');
     echo $form->toString();
 }
+
+function formSuccess($msg = ""){
+    if ($msg= ""){
+        return;
+    }
+    else {
+        echo "
+            <div class='row'>\n
+			<div class='col s1'></div>\n
+			<div class='col s10'>\n
+				<a href='console_SQL.php'>\n
+				<div class='card green darken-2'>\n
+					<div class='card-content white-text'>\n
+						<span class='card-title'>Succès !!!</span>\n
+						<p>$msg</p>\n
+					</div>\n
+				</div>\n
+				</a>\n
+			<div class='col s1'></div>\n
+		  </div>\n
+        ";
+    }
+}
 ?>
+
