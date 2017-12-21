@@ -28,7 +28,7 @@
 			$conn = DBconnection::getInstance();
 			$conn->pdo->exec("USE mysql");
 			$stmt = $conn->pdo->prepare("SELECT User, Password FROM user WHERE User = ? AND Password = PASSWORD(?)");
-			$res = $stmt->execute([$this->login, $this->password]);
+			$res = $stmt->execute([$this->login, $this->mdp]);
 			if ($res) {
 				if ($stmt->rowCount() > 0) {
 					return (true);
