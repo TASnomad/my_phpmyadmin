@@ -1,2 +1,3 @@
 # my_phpmyadmin
-# balec
+
+# Simple clone of phpmyadmin
