@@ -51,6 +51,17 @@
 			</form>
 		</div>
 		<div class="row">
+			<form class="col s12 offset-s3" action="../controllers/db.php" method="POST">
+				<div class="row">
+					<input type="hidden" name="name" value="<?php echo $_GET['db']; ?>">
+					<button class='col s1 offset-s2 btn waves-effect waves-light red darken-1' type='submit' name='delete'>
+						Supprimer
+						<i class='material-icons right'>send</i>
+					</button>
+				</div>
+			</form>
+		</div>
+		<div class="row">
 			<?php if(empty($tables)) : ?>
 				<h5 class="center-align col s6 offset-s3 amber lighten-1 card-panel">
 					Aucunes tables pour la Base de données: <?php echo $_GET["db"]; ?>

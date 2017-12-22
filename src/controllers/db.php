@@ -20,4 +20,10 @@
 		header("Location: $fullUrl/db.php");
 	}
 
+	if (isset($_POST["delete"])) {
+		$db = new Database($_POST["name"]);
+		$db->deleteDB();
+		header("Location: $fullUrl/db.php");
+	}
+
 ?>
