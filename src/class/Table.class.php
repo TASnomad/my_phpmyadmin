@@ -1,14 +1,26 @@
 <?php
 
-class Table{
+class Table {
+	private $dbName;
+	private $name;
 
-  public function createTable($DBname, $Tablename, $oneName, $twoName, $threeType,
-                                                   $oneType, $twoName, $threeType) {
-    $conn = DBconnection::getInstance();
-    $conn->pdo->exec("CREATE TABLE '$DBname' . '$Tablename' ( `$oneName` $oneType NOT NULL ,
-                                                              `$twoName` $twoType NOT NULL ,
-                                                              `$threeName` $threeType NOT NULL )");
-  }
+	public function __construct($db = "", $name = "") {
+		$this->dbName = $db;
+		$this->name = $name;
+	}
+
+	public function createTable($types = array(), $fields = array()) {
+		$sql = "CREATE TABLE $this->dbName.$this->name (";
+
+		for ($cpt = 0; $cpt < count($fields); $cpt++) {
+			$sql .= $fields[$cpt]." ".$types[$cpt].", ";
+		}
+		$sql = rtrim($sql, ", ");
+		$sql .= ")";
+		var_dump($sql);
+		$conn = DBconnection::getInstance();
+		$conn->pdo->exec($sql);
+	}
 }
 
 ?>

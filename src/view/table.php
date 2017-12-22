@@ -22,7 +22,7 @@
 		<div class="row">
       <div class="col s6 m6 offset-m3 l4 offset-l2 z-depth-6 card-panel white">
 				<h5>Créer une table</h5>
-				<form class="col s12" action="../controllers/table.php" method="POST">
+				<form class="col s12" action="../controllers/table.php" method="POST" id="form">
 					<div class="row">
 						<div class="input-field col s6">
 							<input type="text" name="name" id="name" required>
@@ -31,8 +31,8 @@
 					</div>
           <div class="row">
 						<div class="input-field col s6">
-              <input type="text" name="name" id="name" required>
-              <label for="name">Nom de la tale</label>
+              <input type="text" name="tname" id="name" required>
+              <label for="tname">Nom de la table</label>
 						</div>
 					</div>
 					<div class="row">
@@ -40,12 +40,12 @@
 							<input type="text" name="one" id="one" required>
 							<label for="one">Premier champ</label>
 						</div>
-            <select class="browser-default col s6">
+            <select name="T1" class="browser-default col s6" form="form">
               <option value="" disabled selected>Type</option>
-              <option value="1">INT</option>
-              <option value="2">VARCHAR</option>
-              <option value="3">TEXT</option>
-              <option value="3">DATE</option>
+              <option value="INT">INT</option>
+              <option value="VARCHAR(42)">VARCHAR(42)</option>
+              <option value="TEXT">TEXT</option>
+              <option value="DATE">DATE</option>
             </select>
 					</div>
 					<div class="row">
@@ -53,12 +53,12 @@
 							<input type="text" name="two" id="two" required>
 							<label for="two">Second champ</label>
 						</div>
-            <select class="browser-default col s6">
+            <select name="T2" class="browser-default col s6" form="form">
               <option value="" disabled selected>Type</option>
-              <option value="1">INT</option>
-              <option value="2">VARCHAR</option>
-              <option value="3">TEXT</option>
-              <option value="3">DATE</option>
+              <option value="INT">INT</option>
+              <option value="VARCHAR(42)">VARCHAR(42)</option>
+              <option value="TEXT">TEXT</option>
+              <option value="DATE">DATE</option>
             </select>
 					</div>
 
@@ -67,12 +67,12 @@
 							<input type="text" name="three" id="three" required>
 							<label for="three">Troisième champ</label>
 						</div>
-            <select class="browser-default col s6">
+            <select name="T3" class="browser-default col s6" form="form">
               <option value="" disabled selected>Type</option>
-              <option value="1">INT</option>
-              <option value="2">VARCHAR</option>
-              <option value="3">TEXT</option>
-              <option value="3">DATE</option>
+              <option value="INT">INT</option>
+              <option value="VARCHAR(42)">VARCHAR(42)</option>
+              <option value="TEXT">TEXT</option>
+              <option value="DATE">DATE</option>
             </select>
 					</div>
 					<div class="row">
