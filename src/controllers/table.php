@@ -8,4 +8,10 @@
 	$protocol  = empty($_SERVER['HTTPS']) ? 'http' : 'https';
 	$fullUrl  = "${protocol}://". $_SERVER['HTTP_HOST']."/src/view";
 
+  if (isset($_POST["create"])) {
+    $db = new Table($_POST[""]);
+    $db->createTable($_POST[""]);
+    header("Location: $fulUrl/db.php");
+  }
+
   ?>
