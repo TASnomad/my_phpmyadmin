@@ -40,7 +40,7 @@
 							<input type="text" name="one" id="one" required>
 							<label for="one">Premier champ</label>
 						</div>
-            <select name="T1" class="browser-default col s6" form="form">
+            <select name="T1" class="browser-default col s6" form="form" required>
               <option value="" disabled selected>Type</option>
               <option value="INT">INT</option>
               <option value="VARCHAR(42)">VARCHAR(42)</option>
@@ -53,7 +53,7 @@
 							<input type="text" name="two" id="two" required>
 							<label for="two">Second champ</label>
 						</div>
-            <select name="T2" class="browser-default col s6" form="form">
+            <select name="T2" class="browser-default col s6" form="form" required>
               <option value="" disabled selected>Type</option>
               <option value="INT">INT</option>
               <option value="VARCHAR(42)">VARCHAR(42)</option>
@@ -67,7 +67,7 @@
 							<input type="text" name="three" id="three" required>
 							<label for="three">Troisième champ</label>
 						</div>
-            <select name="T3" class="browser-default col s6" form="form">
+            <select name="T3" class="browser-default col s6" form="form" required>
               <option value="" disabled selected>Type</option>
               <option value="INT">INT</option>
               <option value="VARCHAR(42)">VARCHAR(42)</option>

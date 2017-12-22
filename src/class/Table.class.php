@@ -17,7 +17,6 @@ class Table {
 		}
 		$sql = rtrim($sql, ", ");
 		$sql .= ")";
-		var_dump($sql);
 		$conn = DBconnection::getInstance();
 		$conn->pdo->exec($sql);
 	}
