@@ -23,7 +23,7 @@ function formSuccess($msg = ""){
 				<a href='console_SQL.php'>\n
 				<div class='card green darken-2'>\n
 					<div class='card-content white-text'>\n
-						<span class='card-title'>Succès !!!</span>\n
+						<span class='card-title'>SuccÃ¨s !!!</span>\n
 						<p>$msg</p>\n
 					</div>\n
 				</div>\n
@@ -46,7 +46,7 @@ function formError($msg = ""){
 				<a href='console_SQL.php'>\n
 				<div class='card red darken-3'>\n
 					<div class='card-content white-text'>\n
-						<span class='card-title'>Succès !!!</span>\n
+						<span class='card-title'>Error !!!</span>\n
 						<p>$msg</p>\n
 					</div>\n
 				</div>\n
@@ -57,4 +57,3 @@ function formError($msg = ""){
     }
 }
 ?>
-
